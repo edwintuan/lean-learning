@@ -5,6 +5,11 @@ defaultTargets = ["learning"]
 [[lean_lib]]
 name = "Learning"
 
+# 课程文件：Lessons/ 下的每个 .lean 都是一个独立模块，`lake build Lessons` 全部检查
+[[lean_lib]]
+name = "Lessons"
+globs = ["Lessons.+"]
+
 [[lean_exe]]
 name = "learning"
 root = "Main"
